@@ -10,6 +10,7 @@ const Header = () => {
   const [decoded, setDecoded] = useState(null);
   useEffect(() => {
     const fetchToken = async () => {
+      console.log("veficiando token");
       try {
         const decodedToken = await verifyToken();
         setDecoded(decodedToken);
@@ -25,10 +26,8 @@ const Header = () => {
       await removeAuthCookie();
       setToken(null);
       setDecoded(null);
-      console.log("Usuário saiu com sucesso");
     } catch (error) {
       console.error("Erro ao fazer logout:", error);
-      // Lógica para tratar o erro de logout
     }
   };
   const navItems = [
@@ -45,7 +44,7 @@ const Header = () => {
       href: "/about/faq",
     },
     {
-      label: decoded ? "Logout" : "Entrar",
+      label: decoded ? decoded.nome + ", Sair." : "Entrar",
       href: decoded ? "/logout" : "/login",
       onClick: decoded ? handleLogout : null,
     },

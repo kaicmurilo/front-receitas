@@ -5,8 +5,8 @@ import Cookies from "js-cookie";
 export async function verifyToken() {
   try {
     const response = await api.get("/auth/verify-token");
-    console.log(response.data);
-    const decoded = response.data.decoded;
+    const decoded = response.data;
+    console.log(decoded)
     return decoded;
   } catch (error) {
     return null;
