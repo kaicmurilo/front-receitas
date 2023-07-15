@@ -6,7 +6,7 @@ export async function verifyToken() {
   try {
     const response = await api.get("/auth/verify-token");
     const decoded = response.data;
-    console.log(decoded)
+    console.log(decoded);
     return decoded;
   } catch (error) {
     return null;

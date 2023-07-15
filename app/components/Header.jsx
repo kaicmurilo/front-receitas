@@ -44,6 +44,10 @@ const Header = () => {
       href: "/about/faq",
     },
     {
+      label: decoded ? "Receita+" : "",
+      href: decoded ? "/novaReceita" : "",
+    },
+    {
       label: decoded ? decoded.nome + ", Sair." : "Entrar",
       href: decoded ? "/logout" : "/login",
       onClick: decoded ? handleLogout : null,
