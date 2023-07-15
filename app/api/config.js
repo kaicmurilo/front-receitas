@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 const api = axios.create({
   baseURL: `http://localhost:3000`,
   headers: {
-    Authorization: `Bearer ${Cookies.get("token")}`, // Obtém o token do cookie e o envia no cabeçalho da requisição
+    Authorization: Cookies.get("token"), // Obtém o token do cookie e o envia no cabeçalho da requisição
   },
 });
 export async function getUsers() {
@@ -31,3 +31,5 @@ export async function login(email, senha) {
     return null;
   }
 }
+
+export default api;

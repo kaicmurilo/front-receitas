@@ -10,10 +10,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = await login(email, senha);
-
-    // Adicione aqui a lógica para autenticar o usuário
-    console.log("E-mail:", email);
-    console.log("Senha:", senha);
+    window.location.href = "/";
   };
   return (
     <Box
