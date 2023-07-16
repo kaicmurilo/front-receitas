@@ -59,9 +59,13 @@ const HomePage = () => {
         >
           <Card
             key={recipe.id}
-            variant="outlined"
             className="mx-auto"
-            style={{ maxWidth: "400px", width: "400px", padding: "16px" }}
+            style={{
+              maxWidth: "400px",
+              width: "400px",
+              padding: "16px",
+              boxShadow: "none",
+            }}
           >
             <CardHeader title={recipe.nomeReceita} />
             <CardMedia
@@ -97,11 +101,14 @@ const HomePage = () => {
             <Typography variant="subtitle1">
               Receita enviada por: {recipe.nomeCadastrou}
             </Typography>
+            <hr />
           </Card>
         </Box>
       ))}
 
-      {loading && <Typography variant="body1">Carregando...</Typography>}
+      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+        {loading && <Typography variant="body1">Carregando...</Typography>}
+      </Box>
 
       {error && (
         <Typography variant="body1">
@@ -109,9 +116,11 @@ const HomePage = () => {
         </Typography>
       )}
 
-      {!loading && !error && recipes.length > 0 && (
-        <button onClick={handleLoadMore}>Carregar mais receitas</button>
-      )}
+      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+        {!loading && !error && recipes.length > 0 && (
+          <button onClick={handleLoadMore}>Carregar mais receitas</button>
+        )}
+      </Box>
     </Box>
   );
 };
