@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { TextField, Button } from "@mui/material";
 import { verifyToken } from "../auth/auth";
+import { novaReceita } from "../api/receita";
 
 const CadastroReceitaPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -27,10 +28,9 @@ const CadastroReceitaPage = () => {
   if (!isLoggedIn) {
     return null; // ou uma mensagem de carregamento, por exemplo
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Lógica para enviar os dados do formulário para o servidor
-    // Redirecionar para a página de listagem de receitas após o cadastro
+    const res = await novaReceita(nome, ingredientes, modoPreparo);
   };
   return (
     <form onSubmit={handleSubmit}>
