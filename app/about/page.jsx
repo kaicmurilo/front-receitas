@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 const AboutPage = () => {
   return (
-    <div>
+    <Box>
       <Typography variant="h1" component="h1" className="text-4xl">
         Sobre Nosso Projeto
       </Typography>
@@ -14,7 +14,7 @@ const AboutPage = () => {
         cliente. Buscamos constantemente a excelência e aprimoramento, buscando
         superar as expectativas em cada interação.
       </Typography>
-    </div>
+    </Box>
   );
 };
 

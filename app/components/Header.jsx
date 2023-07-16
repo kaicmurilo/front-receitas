@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Cookies from "js-cookie";
 import { verifyToken, removeAuthCookie } from "../auth/auth";
+import { Button } from "@mui/material";
 const Header = () => {
   const pathname = usePathname();
   const [token, setToken] = useState(Cookies.get("token"));

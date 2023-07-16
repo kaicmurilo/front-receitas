@@ -1,7 +1,7 @@
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 const FAQ = () => {
   return (
-    <div>
+    <Box>
       <Typography variant="h1" component="h1" className="text-4xl">
         Perguntas Frequentes
       </Typography>
@@ -27,7 +27,7 @@ const FAQ = () => {
         Na página de login, clique em "Esqueceu sua senha?" e siga as instruções
         para redefinir sua senha por e-mail.
       </Typography>
-    </div>
+    </Box>
   );
 };
 export default FAQ;

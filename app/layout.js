@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import Container from "@mui/material/Container";
+
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -18,11 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt">
       <body className={poppins.className}>
-        <div className="max-w-4xl mx-auto px-5">
+        <Container maxWidth="lg">
           <Header />
           {children}
           <Footer />
-        </div>
+        </Container>
       </body>
     </html>
   );
