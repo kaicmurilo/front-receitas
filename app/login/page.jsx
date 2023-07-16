@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { login } from "../api/config";
-import Cookies from "js-cookie";
 import { Typography, TextField, Button, Box, Link } from "@mui/material";
 
 const LoginPage = () => {
@@ -9,7 +8,6 @@ const LoginPage = () => {
   const [senha, setSenha] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    Cookies.get("token");
     const token = await login(email, senha);
     window.location.href = "/";
   };
