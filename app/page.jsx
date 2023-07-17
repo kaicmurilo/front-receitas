@@ -9,7 +9,7 @@ import {
   CardActions,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { carregaReceitas } from "./api/Receita";
+import { carregaReceitas } from "./api/receita";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
