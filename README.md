@@ -4,7 +4,7 @@ O projeto consiste em uma página de receitas culinárias, onde as receitas são
  
 ## Funcionalidades 
  
-- Cadastro de Usuário: em desenvolvimento 
+- Cadastro de Usuário: concluido 
 - Login de Usuário: concluído 
 - Logout de Usuário: concluído 
 - CRUD de Receitas: apenas cadastrar 
