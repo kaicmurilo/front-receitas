@@ -9,7 +9,7 @@ const FAQ = () => {
         <Typography variant="h5" component="h5">
           1. Como faço para criar uma conta?
         </Typography>
-        Para criar uma conta, clique no botão "Registrar" na página inicial e
+        Para criar uma conta, clique no botão "Criar Conta" na página de logar e
         preencha o formulário com suas informações pessoais.
       </Typography>
       <Typography variant="body1" className="py-10">
