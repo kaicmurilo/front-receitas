@@ -30,3 +30,28 @@ export async function carregaReceitas(page) {
     return error;
   }
 }
+
+export async function buscarReceitas() {
+  try {
+    const dadosToken = Cookies.get("token");
+    const response = await api.get("/receitas/minhasreceitas", {
+      dadosToken,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+}
+
+export async function editarReceita() {
+  try {
+    const response = await api.get("/receitas/minhasreceitas");
+    res = response.data;
+    return res;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+}

@@ -49,6 +49,10 @@ const Header = () => {
       href: decoded ? "/novaReceita" : "",
     },
     {
+      label: decoded ? "Minhas Receitas" : "",
+      href: decoded ? "/minhasReceitas" : "",
+    },
+    {
       label: decoded ? decoded.nome + ", Sair." : "Entrar",
       href: decoded ? "/logout" : "/login",
       onClick: decoded ? handleLogout : null,
